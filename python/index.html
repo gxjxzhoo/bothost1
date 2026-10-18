@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Keep the Blue Alive · Protect Our Ocean</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1f9f9;--surface:#ffffff;--ink:#0a2535;--muted:#4a6676;--head:#0a4a6b;--teal:#14909e;--coral:#ff7a63;--foam:#dff3f3;--line:#c9e1e4;--abyss:#06283d;--deep:#0a4a6b;--on-dark:#e6f6f8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#061b27;--surface:#0d2b3b;--ink:#e6f4f6;--muted:#9bb8c3;--head:#6fd3df;--teal:#4cc3d4;--foam:#10394a;--line:#1c4558;--abyss:#031219}}
+:root[data-theme="dark"]{--bg:#061b27;--surface:#0d2b3b;--ink:#e6f4f6;--muted:#9bb8c3;--head:#6fd3df;--teal:#4cc3d4;--foam:#10394a;--line:#1c4558;--abyss:#031219}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans","Helvetica Neue",Arial,sans-serif;line-height:1.7;font-size:17px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--abyss);z-index:30}
+h1,h2,h3{font-family:"Fraunces",Georgia,"Times New Roman",serif;line-height:1.15;margin:0}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--abyss);overflow-x:auto;white-space:nowrap;box-shadow:0 2px 14px rgba(0,0,0,.25)}
+nav .in{max-width:900px;margin:0 auto;padding:0 14px;display:flex;align-items:center}
+nav b{font-family:"Fraunces",Georgia,serif;color:#fff;font-size:18px;margin-right:auto;padding:12px 8px 12px 0;white-space:nowrap}
+nav a{color:#bfe3ea;text-decoration:none;padding:14px 12px;font-size:15px}
+nav a:hover,nav a:focus-visible{color:#fff;background:rgba(255,255,255,.1);outline:none}
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(120% 90% at 70% 0%,#2aa7b5 0%,#0f6a8a 38%,#073853 75%,#06283d 100%);padding:96px 0 150px}
+.hero h1{font-size:clamp(46px,11vw,92px);font-weight:700;letter-spacing:-.01em;max-width:9em}
+.hero p{max-width:31em;font-size:19px;margin:22px 0 30px;color:#d8f1f4}
+.btn{display:inline-block;background:var(--coral);color:#2a0f09;padding:13px 26px;border-radius:30px;text-decoration:none;font-weight:700;box-shadow:0 8px 24px rgba(255,122,99,.35)}
+.btn.ghost{background:transparent;color:#fff;box-shadow:none;border:1.5px solid rgba(255,255,255,.55);margin-left:10px}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.rays{position:absolute;inset:0;background:conic-gradient(from 160deg at 80% -10%,transparent 0 8deg,rgba(255,255,255,.10) 10deg 16deg,transparent 18deg 30deg,rgba(255,255,255,.07) 32deg 40deg,transparent 42deg);pointer-events:none}
+.waves{position:absolute;left:0;right:0;bottom:-1px;height:120px;pointer-events:none}
+.waves svg{position:absolute;left:0;bottom:0;width:200%;height:100%;animation:drift 18s linear infinite}
+.waves svg:nth-child(2){animation-duration:11s;animation-direction:reverse}
+@keyframes drift{to{transform:translateX(-50%)}}
+.bubble{position:absolute;border-radius:50%;border:2px solid rgba(255,255,255,.35);animation:rise 10s linear infinite}
+.b1{width:16px;height:16px;left:10%;bottom:30px}.b2{width:28px;height:28px;left:80%;bottom:20px;animation-delay:3s}.b3{width:10px;height:10px;left:52%;bottom:10px;animation-delay:6s}
+@keyframes rise{to{transform:translateY(-520px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.waves svg,.bubble{animation:none}.bubble{display:none}html{scroll-behavior:auto}}
+/* sections */
+section{padding:70px 0 10px}
+h2{font-size:clamp(30px,6vw,44px);color:var(--head);margin-bottom:14px}
+.lead{max-width:36em;color:var(--muted);font-size:18px;margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.stat{background:var(--surface);border-radius:18px;padding:22px 20px;border:1px solid var(--line)}
+.stat b{display:block;font-family:"Fraunces",Georgia,serif;font-size:46px;line-height:1;color:var(--coral)}
+.stat span{display:block;margin-top:10px;font-size:15px;color:var(--muted)}
+.card{background:var(--surface);border-radius:20px;padding:22px;border:1px solid var(--line);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(10,74,107,.14)}
+.card .ic{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,var(--foam),#b8e6ea);display:grid;place-items:center;font-size:28px;margin-bottom:14px}
+.card h3{font-size:22px;color:var(--head);margin-bottom:6px}
+.card p{margin:0;font-size:15.5px;color:var(--muted)}
+.threat{background:var(--surface);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden}
+.threat button{all:unset;box-sizing:border-box;display:flex;gap:14px;align-items:center;width:100%;padding:18px 20px;cursor:pointer;font-weight:700;font-size:18px}
+.threat button em{font-style:normal;font-size:24px}
+.threat button i{margin-left:auto;font-style:normal;color:var(--teal);font-size:26px;transition:transform .25s}
+.threat[data-open="true"] button i{transform:rotate(45deg)}
+.threat div{display:none;padding:0 20px 20px 58px;color:var(--muted)}
+.threat[data-open="true"] div{display:block}
+button:focus-visible{outline:3px solid var(--teal);outline-offset:-3px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tabs button{all:unset;box-sizing:border-box;cursor:pointer;padding:10px 20px;border-radius:30px;background:var(--surface);border:1px solid var(--line);font-weight:500}
+.tabs button[aria-selected="true"]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.tabs button:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.panel{display:none;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 26px}
+.panel.on{display:block}
+.panel ul{margin:0;padding:0;list-style:none}
+.panel li{padding:9px 0 9px 34px;position:relative;border-bottom:1px dashed var(--line)}
+.panel li:last-child{border:0}
+.panel li::before{content:"🌊";position:absolute;left:0;top:9px;font-size:18px}
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.day{background:linear-gradient(135deg,var(--deep),#127c96);color:#fff;border-radius:20px;padding:24px}
+.day b{font-family:"Fraunces",Georgia,serif;font-size:34px;display:block;margin-bottom:4px}
+.day p{margin:0;color:#d4eff3;font-size:15.5px}
+/* deep band */
+.band{margin-top:70px;background:linear-gradient(180deg,#073853,#06283d 60%,#031a28);color:var(--on-dark);padding-bottom:70px}
+.band section{padding-top:70px}
+.band h2{color:#fff}.band .lead{color:#a9d1da}
+.quiz{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:24px}
+.q-t{font-family:"Fraunces",Georgia,serif;font-size:22px;margin-bottom:16px}
+.opt{all:unset;box-sizing:border-box;display:block;width:100%;padding:13px 16px;margin-bottom:10px;border:1.5px solid rgba(255,255,255,.25);border-radius:14px;cursor:pointer}
+.opt:hover{background:rgba(255,255,255,.1)}
+.opt:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.opt.ok{background:#1f9d6a;border-color:#1f9d6a;color:#fff}.opt.no{background:#c8412e;border-color:#c8412e;color:#fff}
+.fb{min-height:1.8em;color:#bfe3ea;font-size:15.5px;margin-top:4px}
+.nxt{all:unset;cursor:pointer;background:var(--coral);color:#2a0f09;font-weight:700;padding:10px 24px;border-radius:30px;margin-top:10px;display:none}
+.nxt:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.pledge{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:24px 24px 10px}
+.pledge label{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px;cursor:pointer}
+.pledge input{width:24px;height:24px;margin-top:3px;accent-color:var(--coral);flex:none}
+.meter{height:14px;background:rgba(255,255,255,.14);border-radius:8px;overflow:hidden;margin:20px 0 14px}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#4cc3d4,#ff7a63);transition:width .4s}
+#msg{font-family:"Fraunces",Georgia,serif;font-size:22px;color:#fff;min-height:1.8em;margin:0}
+footer{background:#031a28;color:#8fb9c4;text-align:center;padding:34px 22px calc(34px + env(safe-area-inset-bottom,0px));font-size:15px}
+footer b{display:block;font-family:"Fraunces",Georgia,serif;color:#fff;font-size:22px;margin-bottom:6px;font-weight:500}
+.depth{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:25;background:rgba(6,40,61,.88);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:6px 14px;font-size:14px;backdrop-filter:blur(6px)}
+.depth b{color:#7fe0ec}
+</style>
+</head>
+<body>
+<nav aria-label="Page sections"><div class="in"><b>Blue Alive</b><a href="#why">Why it matters</a><a href="#life">Habitats</a><a href="#threats">Threats</a><a href="#act">Take action</a><a href="#quiz">Quiz</a><a href="#pledge">Pledge</a></div></nav>
+
+<header class="hero">
+  <div class="rays"></div>
+  <span class="bubble b1"></span><span class="bubble b2"></span><span class="bubble b3"></span>
+  <div class="wrap">
+    <h1>Keep the blue alive.</h1>
+    <p>The ocean covers about seven-tenths of our planet. It cools the climate, feeds billions, and gives us the air we breathe. Protecting it means protecting ourselves.</p>
+    <a class="btn" href="#pledge">Make your pledge</a><a class="btn ghost" href="#why">Dive in</a>
+  </div>
+  <div class="waves" aria-hidden="true">
+    <svg viewBox="0 0 2400 120" preserveAspectRatio="none"><path fill="rgba(255,255,255,.28)" d="M0,60 Q150,10 300,60 T600,60 T900,60 T1200,60 T1500,60 T1800,60 T2100,60 T2400,60 L2400,120 L0,120Z"/></svg>
+    <svg viewBox="0 0 2400 120" preserveAspectRatio="none"><path style="fill:var(--bg)" d="M0,80 Q150,30 300,80 T600,80 T900,80 T1200,80 T1500,80 T1800,80 T2100,80 T2400,80 L2400,120 L0,120Z"/></svg>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <section id="why">
+    <h2>Why the ocean matters</h2>
+    <p class="lead">It is Earth’s largest life-support system. Tiny plankton produce oxygen, seawater absorbs carbon dioxide and excess heat, and billions of people depend on the sea for food and work.</p>
+    <div class="grid">
+      <div class="stat"><b><span data-count="71">71</span>%</b><span>of Earth’s surface is covered by ocean</span></div>
+      <div class="stat"><b>~<span data-count="50">50</span>%</b><span>of our oxygen comes from marine life (common estimate)</span></div>
+      <div class="stat"><b>~<span data-count="90">90</span>%</b><span>of the extra heat from warming is absorbed by the sea (common estimate)</span></div>
+      <div class="stat"><b>~<span data-count="8">8</span>M</b><span>tonnes of plastic reach the ocean each year (common estimate)</span></div>
+    </div>
+  </section>
+
+  <section id="life">
+    <h2>Homes beneath the surface</h2>
+    <p class="lead">These ecosystems cover little space but do enormous work. They are also fragile.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">🪸</div><h3>Coral reefs</h3><p>A tiny share of the seafloor, yet home to roughly a quarter of marine species. Warm water causes bleaching.</p></div>
+      <div class="card"><div class="ic">🌿</div><h3>Mangroves</h3><p>Tangled roots calm waves, hold the shore together, shelter young fish and store large amounts of carbon.</p></div>
+      <div class="card"><div class="ic">🌾</div><h3>Seagrass meadows</h3><p>Underwater prairies that feed turtles and dugongs, nurse juvenile fish and capture carbon.</p></div>
+      <div class="card"><div class="ic">🐋</div><h3>Open ocean</h3><p>Whales, tuna and deep-sea life need clean, quiet water. Noise, nets and pollution disturb them.</p></div>
+    </div>
+  </section>
+
+  <section id="threats">
+    <h2>What is putting it at risk</h2>
+    <p class="lead">Tap a card to see how each threat harms the sea.</p>
+    <div class="threat"><button aria-expanded="false"><em>🛍️</em>Plastic and microplastics<i>+</i></button><div>Bags and lost fishing nets entangle or are swallowed by animals. Broken into microplastics, they enter the food chain and eventually return to our plates.</div></div>
+    <div class="threat"><button aria-expanded="false"><em>🎣</em>Overfishing<i>+</i></button><div>When fish are caught faster than they can breed, populations collapse and the whole marine food web is damaged.</div></div>
+    <div class="threat"><button aria-expanded="false"><em>🌡️</em>Warming and acidification<i>+</i></button><div>Hotter water bleaches corals. Absorbing more carbon dioxide makes seawater more acidic, making it harder for shellfish and corals to build their skeletons.</div></div>
+    <div class="threat"><button aria-expanded="false"><em>🏗️</em>Coastal development<i>+</i></button><div>Land reclamation and shoreline construction shrink mangroves, tidal flats and wetlands, leaving fish and migratory birds without homes.</div></div>
+    <div class="threat"><button aria-expanded="false"><em>🛢️</em>Oil and chemical pollution<i>+</i></button><div>Oil spills and farm or industrial runoff create low-oxygen “dead zones” and toxic algal blooms.</div></div>
+  </section>
+
+  <section id="act">
+    <h2>What we can do</h2>
+    <p class="lead">Change happens at every scale. Pick a level to see ideas.</p>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true">Individuals</button>
+      <button role="tab" aria-selected="false">Communities</button>
+      <button role="tab" aria-selected="false">Governments</button>
+    </div>
+    <div class="panel on"><ul><li>Carry a reusable bottle, bag and cutlery to cut single-use plastic.</li><li>Choose seafood with sustainability certification and avoid products made from coral or turtle shell.</li><li>Travel low-carbon and save energy to slow warming.</li><li>Pick eco-friendly laundry and care products to reduce microplastics.</li></ul></div>
+    <div class="panel"><ul><li>Join or organize a beach or river clean-up and sort the waste you collect.</li><li>Never pour used oil, medicine or chemicals down the drain.</li><li>Run ocean talks and projects in schools and neighborhoods.</li><li>At the shore, don’t step on reefs or take living creatures home.</li></ul></div>
+    <div class="panel"><ul><li>Create and enforce marine protected areas and fishing seasons.</li><li>Cut pollution at its source, on land, before it reaches the sea.</li><li>Restore mangroves, seagrass and coastal wetlands.</li><li>Back clean energy and greener shipping to lower ocean emissions.</li></ul></div>
+  </section>
+
+  <section id="days">
+    <h2>Dates worth marking</h2>
+    <p class="lead">Put these on your calendar.</p>
+    <div class="days">
+      <div class="day"><b>June 8</b><p>World Oceans Day. A UN-recognized day to celebrate and protect the sea.</p></div>
+      <div class="day"><b>July 18</b><p>China’s National Ocean Awareness Day, dedicated to spreading ocean knowledge.</p></div>
+    </div>
+  </section>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <section id="quiz">
+      <h2>Ocean quiz</h2>
+      <p class="lead">Four quick questions. How deep does your ocean knowledge go?</p>
+      <div class="quiz">
+        <div class="q-t" id="qt"></div>
+        <div id="qo"></div>
+        <div class="fb" id="fb" aria-live="polite"></div>
+        <button class="nxt" id="nx">Next question</button>
+      </div>
+    </section>
+
+    <section id="pledge">
+      <h2>My ocean pledge</h2>
+      <p class="lead">Tick what you will do and watch your progress rise.</p>
+      <div class="pledge">
+        <label><input type="checkbox"><span>Use less single-use plastic and bring my own bottle and bag</span></label>
+        <label><input type="checkbox"><span>Take all my litter home from the beach</span></label>
+        <label><input type="checkbox"><span>Choose sustainable seafood and avoid endangered-species products</span></label>
+        <label><input type="checkbox"><span>Save energy and travel low-carbon</span></label>
+        <label><input type="checkbox"><span>Share what I learned with friends and family</span></label>
+      </div>
+      <div class="meter" role="progressbar" aria-label="Pledge progress" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><i id="bar"></i></div>
+      <p id="msg">Start with one small action.</p>
+    </section>
+  </div>
+</div>
+</main>
+
+<footer><b>Every small action flows into the sea.</b>Figures are commonly cited estimates, for general awareness only.</footer>
+<div class="depth" aria-hidden="true">Depth <b id="dp">0</b> m</div>
+
+<script>
+document.querySelectorAll('.threat button').forEach(function(b){b.addEventListener('click',function(){var t=b.parentElement,o=t.getAttribute('data-open')==='true';t.setAttribute('data-open',o?'false':'true');b.setAttribute('aria-expanded',o?'false':'true')})});
+var tabs=document.querySelectorAll('.tabs button'),panels=document.querySelectorAll('.panel');
+tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x,i){var on=x===t;x.setAttribute('aria-selected',on);panels[i].classList.toggle('on',on)})})});
+/* depth gauge */
+var dp=document.getElementById('dp');
+function depth(){var h=document.documentElement.scrollHeight-innerHeight,f=h>0?scrollY/h:0;dp.textContent=Math.round(f*4000).toLocaleString('en-US')}
+addEventListener('scroll',depth,{passive:true});depth();
+/* counters (one-time) */
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if('IntersectionObserver' in window&&!rm){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);
+    var el=e.target,end=+el.dataset.count,t0=null;
+    (function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/1200,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)})(performance.now());
+  })},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){el.textContent='0';io.observe(el)});
+}
+/* quiz */
+var Q=[
+{q:'How much of Earth’s surface is covered by ocean?',o:['About 30%','About 50%','About 71%'],a:2,e:'The ocean covers about 71% of the planet, which is why Earth is called the Blue Planet.'},
+{q:'Which habit best reduces plastic pollution in the sea?',o:['Using disposable cutlery','Carrying a reusable bottle and bag','Leaving litter on the beach'],a:1,e:'Cutting single-use plastic at the source is the most direct fix.'},
+{q:'What is one main cause of coral bleaching?',o:['Rising water temperature','Water that is too clear','Too many fish'],a:0,e:'Heat stress makes corals expel the algae that feed them, leaving them pale and weak.'},
+{q:'What do mangrove forests do for coastlines?',o:['They are only decorative','They calm waves and shelter young fish','They speed up erosion'],a:1,e:'Mangroves protect shores and serve as nurseries for many marine species.'}];
+var qi=0,score=0,done=false,qt=document.getElementById('qt'),qo=document.getElementById('qo'),fb=document.getElementById('fb'),nx=document.getElementById('nx');
+function show(){var d=Q[qi];qt.textContent=(qi+1)+' / '+Q.length+'  ·  '+d.q;qo.innerHTML='';fb.textContent='';nx.style.display='none';
+d.o.forEach(function(t,i){var b=document.createElement('button');b.className='opt';b.textContent=t;b.onclick=function(){
+qo.querySelectorAll('.opt').forEach(function(x,j){x.style.pointerEvents='none';if(j===d.a)x.classList.add('ok')});
+if(i===d.a){score++;fb.textContent='Correct! '+d.e}else{b.classList.add('no');fb.textContent='Not quite. '+d.e}
+nx.textContent=qi<Q.length-1?'Next question':'See my result';nx.style.display='inline-block'};qo.appendChild(b)})}
+nx.onclick=function(){
+if(done){qi=0;score=0;done=false;show();return}
+if(qi<Q.length-1){qi++;show()}else{done=true;qt.textContent='You scored '+score+' out of '+Q.length;qo.innerHTML='';fb.textContent=score===Q.length?'Perfect score! You really know your ocean.':'Nice work. Keep exploring the sea!';nx.textContent='Play again'}};
+show();
+/* pledge */
+var boxes=document.querySelectorAll('.pledge input'),bar=document.getElementById('bar'),msg=document.getElementById('msg'),meter=document.querySelector('.meter');
+var words=['Start with one small action.','A great start. Keep going!','Past halfway. The ocean thanks you.','One step left. You’re almost a guardian!','All done! You are an ocean guardian 🌊'];
+boxes.forEach(function(x){x.addEventListener('change',function(){var n=0;boxes.forEach(function(y){if(y.checked)n++});bar.style.width=(n/boxes.length*100)+'%';meter.setAttribute('aria-valuenow',n);msg.textContent=words[n]})});
+</script>
+</body>
+</html>
