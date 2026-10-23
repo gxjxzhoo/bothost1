@@ -1,6 +1,3 @@
-# app-ws (v10)
-
-VLESS / Trojan over WebSocket，Python 版与 Node 版功能一致。
 
 ## 目录
 - `python/` app.py + index.html + Dockerfile + requirements.txt
